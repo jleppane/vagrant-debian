@@ -9,6 +9,6 @@ Some shell scripts written for `debian/contrib-stretch64` Vagrant box to test an
 
 ## Usage
 
-Edit `Vagrantfile`, `scripts/provision.conf` and `scripts/provision.sh` if necessary. Then run:
+Add packages to `apt_packages` in `Vagrantfile`. Edit `Vagrantfile` otherwise if necessary. Then run:
 
     vagrant up

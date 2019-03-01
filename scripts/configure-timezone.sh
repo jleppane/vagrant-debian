@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+TIMEZONE="$1"
+
 ### configure timezone #########################################################
 
 ln -sf /usr/share/$TIMEZONE /etc/localtime

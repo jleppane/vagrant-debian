@@ -19,6 +19,23 @@ Vagrant.configure("2") do |config|
     vb.memory = 1024
   end
 
-  # provision
-  config.vm.provision "shell", path: "scripts/provision.sh"
+  # configure timezone, for example: "UTC" or "Europe/Helsinki
+  timezone = "UTC"
+
+  # configure apt repository, for example: "http://www.nic.funet.fi/debian"
+  # or "http://deb.debian.org/debian"
+  apt_repository = "http://www.nic.funet.fi/debian"
+
+  # configure packages to be installed
+  apt_packages = [
+    "htop",
+    "net-tools",
+    "vim"
+  ]
+
+  # provision scripts
+  config.vm.provision "shell", path: "scripts/configure-timezone.sh", args: timezone
+  config.vm.provision "shell", path: "scripts/configure-apt.sh", args: apt_repository
+  config.vm.provision "shell", path: "scripts/apt-upgrade-packages.sh"
+  config.vm.provision "shell", path: "scripts/apt-install-packages.sh", args: apt_packages
 end

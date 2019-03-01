@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+APT_REPOSITORY="$1"
+
 ### configure apt ##############################################################
 
 # set default-release
@@ -34,4 +36,4 @@ cat <<- EOF > /etc/apt/sources.list.d/security.list
 EOF
 
 # remove default source files
-rm /etc/apt/sources.list* &> /dev/null
+rm /etc/apt/sources.list* &> /dev/null || true

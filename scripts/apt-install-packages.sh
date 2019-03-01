@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
+APT_PACKAGES="$@"
+
 ### install packages ###########################################################
 
 # update package information
 apt-get update
 
 # install packages
-[[ ${#APT_PACKAGES[@]} -ne 0 ]] && apt-get -y install "${APT_PACKAGES[@]}"
+apt-get -y install $APT_PACKAGES
