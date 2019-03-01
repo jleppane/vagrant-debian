@@ -4,8 +4,8 @@ Some shell scripts written for `debian/contrib-stretch64` Vagrant box to test an
 
 ## Dependencies
 
-* Vagrant
-* VirtualBox
+- Vagrant
+- VirtualBox
 
 ## Usage
 
