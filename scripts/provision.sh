@@ -4,4 +4,5 @@
 . /vagrant/scripts/provision.conf
 
 # execute scripts
+. /vagrant/scripts/provision.d/configure-apt.sh
 . /vagrant/scripts/provision.d/configure-timezone.sh
