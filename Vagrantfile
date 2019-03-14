@@ -35,7 +35,9 @@ Vagrant.configure("2") do |config|
 
   # provision scripts
   config.vm.provision "shell", path: "scripts/configure-timezone.sh", args: timezone
-  config.vm.provision "shell", path: "scripts/configure-apt.sh", args: apt_repository
+  config.vm.provision "shell", path: "scripts/configure-apt-default-release.sh"
+  config.vm.provision "shell", path: "scripts/configure-apt-preferences.sh"
+  config.vm.provision "shell", path: "scripts/configure-apt-sources.sh", args: apt_repository
   config.vm.provision "shell", path: "scripts/apt-upgrade-packages.sh"
   config.vm.provision "shell", path: "scripts/apt-install-packages.sh", args: apt_packages
 end
