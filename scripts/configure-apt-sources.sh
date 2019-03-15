@@ -6,14 +6,14 @@ APT_REPOSITORY="$1"
 
 # source for "stable"
 cat <<- EOF > /etc/apt/sources.list.d/stable.list
-	deb     $APT_REPOSITORY stable main
-	deb-src $APT_REPOSITORY stable main
+	deb     $APT_REPOSITORY stretch main
+	deb-src $APT_REPOSITORY stretch main
 EOF
 
 # source for "security"
 cat <<- EOF > /etc/apt/sources.list.d/security.list
-	deb     http://security.debian.org/debian-security stable/updates main
-	deb-src http://security.debian.org/debian-security stable/updates main
+	deb     http://security.debian.org/debian-security stretch/updates main
+	deb-src http://security.debian.org/debian-security stretch/updates main
 EOF
 
 # remove default source files
