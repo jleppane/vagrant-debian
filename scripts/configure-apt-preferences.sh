@@ -6,12 +6,12 @@
 cat <<- EOF > /etc/apt/preferences.d/stable.pref
 	Package: *
 	Pin: release a=stable
-	Pin-Priority: 900
+	Pin-Priority: 990
 EOF
 
 # preference for "security"
 cat <<- EOF > /etc/apt/preferences.d/security.pref
 	Package: *
 	Pin: release l=Debian-Security
-	Pin-Priority: 1000
+	Pin-Priority: 990
 EOF
