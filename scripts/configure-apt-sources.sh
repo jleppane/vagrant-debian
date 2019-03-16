@@ -10,6 +10,12 @@ cat <<- EOF > /etc/apt/sources.list.d/stable.list
 	deb-src $APT_REPOSITORY stretch main
 EOF
 
+# source for "stable-backports"
+cat <<- EOF > /etc/apt/sources.list.d/stable-backports.list
+	deb     $APT_REPOSITORY stretch-backports main
+	deb-src $APT_REPOSITORY stretch-backports main
+EOF
+
 # source for "security"
 cat <<- EOF > /etc/apt/sources.list.d/security.list
 	deb     http://security.debian.org/debian-security stretch/updates main

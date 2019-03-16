@@ -26,11 +26,15 @@ Vagrant.configure("2") do |config|
   # or "http://deb.debian.org/debian"
   apt_repository = "http://www.nic.funet.fi/debian"
 
-  # configure packages to be installed
-  apt_packages = [
+  # configure packages to be installed from "stable"
+  apt_packages_stable = [
     "htop",
     "net-tools",
     "vim"
+  ]
+
+  # configure packages to be installed from "stable-backports"
+  apt_packages_stable_backports = [
   ]
 
   # provision scripts
@@ -39,5 +43,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "scripts/configure-apt-preferences.sh"
   config.vm.provision "shell", path: "scripts/configure-apt-sources.sh", args: apt_repository
   config.vm.provision "shell", path: "scripts/apt-upgrade-packages.sh"
-  config.vm.provision "shell", path: "scripts/apt-install-packages.sh", args: apt_packages
+  config.vm.provision "shell", path: "scripts/apt-install-packages-stable.sh", args: apt_packages_stable
+  config.vm.provision "shell", path: "scripts/apt-install-packages-stable-backports.sh", args: apt_packages_stable_backports
 end
