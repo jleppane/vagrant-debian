@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = "debian/contrib-stretch64"
 
   # hostname
-  config.vm.hostname = "debian.dev"
+  config.vm.hostname = "debian.virtual"
 
   # forward port mappings
   # config.vm.network "forwarded_port", guest: 80, host: 8080
