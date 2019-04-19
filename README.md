@@ -11,4 +11,6 @@ Some shell scripts written for `debian/contrib-stretch64` Vagrant box to test an
 
 Add packages to be installed to `apt_packages_stable` and `apt_packages_stable_backports` in `Vagrantfile`. Edit `Vagrantfile` otherwise if necessary. Then run:
 
-    vagrant up
+```
+vagrant up
+```
