@@ -4,5 +4,5 @@
 
 # set default-release
 cat <<- EOF > /etc/apt/apt.conf
-	APT::Default-Release "stable";
+	APT::Default-Release "buster";
 EOF

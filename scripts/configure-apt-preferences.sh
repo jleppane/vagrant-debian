@@ -2,10 +2,10 @@
 
 ### configure apt ##############################################################
 
-# preference for "stable"
-cat <<- EOF > /etc/apt/preferences.d/stable.pref
+# preference for "buster"
+cat <<- EOF > /etc/apt/preferences.d/buster.pref
 	Package: *
-	Pin: release a=stable
+	Pin: release a=buster
 	Pin-Priority: 990
 EOF
 

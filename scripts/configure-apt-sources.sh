@@ -4,22 +4,22 @@ APT_REPOSITORY="$1"
 
 ### configure apt ##############################################################
 
-# source for "stable"
-cat <<- EOF > /etc/apt/sources.list.d/stable.list
-	deb     $APT_REPOSITORY stretch main
-	deb-src $APT_REPOSITORY stretch main
+# source for "buster"
+cat <<- EOF > /etc/apt/sources.list.d/buster.list
+	deb     $APT_REPOSITORY buster main contrib non-free
+	deb-src $APT_REPOSITORY buster main contrib non-free
 EOF
 
-# source for "stable-backports"
-cat <<- EOF > /etc/apt/sources.list.d/stable-backports.list
-	deb     $APT_REPOSITORY stretch-backports main
-	deb-src $APT_REPOSITORY stretch-backports main
+# source for "buster-backports"
+cat <<- EOF > /etc/apt/sources.list.d/buster-backports.list
+	deb     $APT_REPOSITORY buster-backports main contrib non-free
+	deb-src $APT_REPOSITORY buster-backports main contrib non-free
 EOF
 
 # source for "security"
 cat <<- EOF > /etc/apt/sources.list.d/security.list
-	deb     http://security.debian.org/debian-security stretch/updates main
-	deb-src http://security.debian.org/debian-security stretch/updates main
+	deb     http://security.debian.org/debian-security buster/updates main contrib non-free
+	deb-src http://security.debian.org/debian-security buster/updates main contrib non-free
 EOF
 
 # remove default source files
